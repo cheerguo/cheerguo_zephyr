@@ -61,3 +61,4 @@ west-commands:
       - name: bindesc
         class: Bindesc
         help: work with Binary Descriptors
+
