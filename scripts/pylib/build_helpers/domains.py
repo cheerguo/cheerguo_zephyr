@@ -8,6 +8,7 @@ This provides parsing of domains yaml file and creation of objects of the
 Domain class.
 '''
 
+
 from dataclasses import dataclass
 
 import yaml
