@@ -8,9 +8,10 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v4
         with:
-          path: app
+          path: zephyr
 
       - name: List files in the repository
+        working-directory: zephyr
         run: |
           ls -al ${{ github.workspace }}
       - name: get directory
