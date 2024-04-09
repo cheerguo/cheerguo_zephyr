@@ -21,7 +21,7 @@ jobs:
       - name: Setup Zephyr project
         uses: zephyrproject-rtos/action-zephyr-setup@v1.0.2
         with:
-          app-path: app
+          app-path: zephyr
           toolchains: arm-zephyr-eabi
           sdk-version: 0.16.5-1
 
