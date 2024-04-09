@@ -122,6 +122,9 @@ jobs:
           echo "subset=${subset}" >> $GITHUB_OUTPUT
           echo "size=${size}" >> $GITHUB_OUTPUT
           echo "fullrun=${TWISTER_FULL}" >> $GITHUB_OUTPUT
+          echo "subset=${subset}"
+          echo "size=${size}"
+          echo "fullrun=${TWISTER_FULL}"
 
   twister-build:
     runs-on:
