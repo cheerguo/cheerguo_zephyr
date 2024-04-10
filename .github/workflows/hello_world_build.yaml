@@ -26,5 +26,6 @@ jobs:
           sdk-version: 0.16.5-1
 
       - name: Build
+        working-directory: zephyr
         run: |
-          west build app
+          west build -p always -b nrf52840dk_nrf52840 samples\basic\blinky
