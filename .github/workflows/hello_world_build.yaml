@@ -10,14 +10,6 @@ jobs:
         with:
           path: zephyr
 
-      - name: List files in the repository
-        working-directory: zephyr
-        run: |
-          ls -al ${{ github.workspace }}
-      - name: get directory
-        run: |
-          df -h
-
       - name: Setup Zephyr project
         uses: zephyrproject-rtos/action-zephyr-setup@v1.0.2
         with:
@@ -30,3 +22,11 @@ jobs:
         run: |
           pwd
           west build -p always -b nrf52840dk_nrf52840 samples/basic/blinky
+
+      - name: List files in the repository
+        working-directory: zephyr
+        run: |
+          ls -al ${{ github.workspace }}
+      - name: get directory
+        run: |
+          df -h
