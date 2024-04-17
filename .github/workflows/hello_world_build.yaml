@@ -11,13 +11,11 @@ jobs:
       - name: Build
         run: |
           pwd
-          cmake --version
-          python3 --version
-          west init zephyrproject
-          cd zephyrproject
+          mkdir -p /repo-cache/zephyrproject
+          cd /repo-cache/zephyrproject
+          git clone https://github.com/zephyrproject-rtos/zephyr.git
+          west init -l zephyr
           west update
-          west zephyr-export
           cd zephyr
           pwd
-          west build -b qemu_x86 samples/hello_world
-          df -h
+          west build -p always -b nrf52840dk/nrf52840 samples/basic/blinky
