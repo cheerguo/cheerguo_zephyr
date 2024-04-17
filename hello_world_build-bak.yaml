@@ -1,0 +1,35 @@
+name: west_build_demo
+run-name: ${{ github.actor }} is doing west build 🚀
+on: [push]
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v4
+        with:
+          path: zephyr
+
+      - name: Setup Zephyr project
+        uses: zephyrproject-rtos/action-zephyr-setup@v1.0.2
+        with:
+          app-path: zephyr
+          toolchains: arm-zephyr-eabi
+          sdk-version: 0.16.5-1
+
+      - name: Build
+        working-directory: zephyr
+        run: |
+          pwd
+          cmake --version
+          python3 --version
+          df -h
+
+
+      - name: List files in the repository
+        working-directory: zephyr
+        run: |
+          ls -al ${{ github.workspace }}
+      - name: get directory
+        run: |
+          df -h
