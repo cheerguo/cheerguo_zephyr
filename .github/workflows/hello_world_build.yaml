@@ -23,10 +23,8 @@ jobs:
           pwd
           cmake --version
           python3 --version
-#         dtc --version
           df -h
 
-#          west build -p always -b nrf52840dk_nrf52840 samples/basic/blinky
 
       - name: List files in the repository
         working-directory: zephyr
