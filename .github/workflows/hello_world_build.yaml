@@ -15,3 +15,4 @@ jobs:
           whoami
           ls /home/user/.cmake
           ls /root/.cmake
+          ls /root/.cmake/packages
