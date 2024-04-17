@@ -17,5 +17,6 @@ jobs:
           cd ~/zephyrproject
           west update
           west zephyr-export
+          cd ~/zephyrproject/zephyr
           west build -p always -b nrf52840dk_nrf52840 samples/basic/blinky
           df -h
