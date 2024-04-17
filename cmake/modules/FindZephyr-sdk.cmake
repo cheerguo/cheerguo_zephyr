@@ -66,6 +66,7 @@ if(("zephyr" STREQUAL ${ZEPHYR_TOOLCHAIN_VARIANT}) OR
         /usr
         /usr/local
         /opt
+        /opt/toolchains
         $ENV{HOME}
         $ENV{HOME}/.local
         $ENV{HOME}/.local/opt
