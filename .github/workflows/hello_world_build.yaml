@@ -12,3 +12,5 @@ jobs:
         run: |
           pwd
           echo ${ZSDK_VERSION}
+          whoami
+          ls ~/.cmake
