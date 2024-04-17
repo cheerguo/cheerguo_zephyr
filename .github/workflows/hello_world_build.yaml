@@ -9,7 +9,6 @@ jobs:
       options: '--entrypoint /bin/bash'
     steps:
       - name: Build
-        working-directory: zephyr
         run: |
           pwd
           cmake --version
