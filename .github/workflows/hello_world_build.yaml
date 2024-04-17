@@ -16,3 +16,11 @@ jobs:
           ls /home/user/.cmake
           ls /root/.cmake
           ls /root/.cmake/packages
+          mkdir -p /repo-cache/zephyrproject
+          cd /repo-cache/zephyrproject
+          git clone https://github.com/zephyrproject-rtos/zephyr.git
+          west init -l zephyr
+          west update
+          cd zephyr
+          west build -p always -b nrf52840dk_nrf52840 samples/basic/blinky
+
