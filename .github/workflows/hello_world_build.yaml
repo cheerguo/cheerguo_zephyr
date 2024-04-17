@@ -11,5 +11,13 @@ jobs:
       - name: Build
         run: |
           pwd
-          ls /opt/toolchains
-
+          cmake --version
+          python3 --version
+          west init zephyrproject
+          cd zephyrproject
+          west update
+          west zephyr-export
+          cd zephyr
+          pwd
+          west build -b qemu_x86 samples/hello_world
+          df -h
