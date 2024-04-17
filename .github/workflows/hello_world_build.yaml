@@ -13,10 +13,10 @@ jobs:
           pwd
           cmake --version
           python3 --version
-          west init ~/zephyrproject
-          cd ~/zephyrproject
+          west init zephyrproject
+          cd zephyrproject
           west update
           west zephyr-export
-          cd ~/zephyrproject/zephyr
+          cd zephyr
           west build -p always -b nrf52840dk_nrf52840 samples/basic/blinky
           df -h
