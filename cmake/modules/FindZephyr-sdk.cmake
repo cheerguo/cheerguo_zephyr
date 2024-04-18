@@ -50,7 +50,7 @@ if(("zephyr" STREQUAL ${ZEPHYR_TOOLCHAIN_VARIANT}) OR
   SET(CMAKE_FIND_PACKAGE_SORT_ORDER NATURAL)
 
   if(DEFINED ZEPHYR_SDK_INSTALL_DIR)
-  message(STATUS "ZEPHYR_SDK_INSTALL_DIR  -> ${ZEPHYR_SDK_INSTALL_DIR}")
+  message("ZEPHYR_SDK_INSTALL_DIR  -> ${ZEPHYR_SDK_INSTALL_DIR}")
     # The Zephyr SDK will automatically set the toolchain variant.
     # To support Zephyr SDK tools (DTC, and other tools) with 3rd party toolchains
     # then we keep track of current toolchain variant.
@@ -106,7 +106,7 @@ if(("zephyr" STREQUAL ${ZEPHYR_TOOLCHAIN_VARIANT}) OR
       endif()
     endforeach()
 
-    
+
     if (NOT ${Zephyr-sdk_FOUND})
       # This means no compatible Zephyr SDK versions were found, set the version
       # back to the minimum version so that it is displayed in the error text.
