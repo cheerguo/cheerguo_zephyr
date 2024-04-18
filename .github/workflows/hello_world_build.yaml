@@ -11,7 +11,7 @@ jobs:
     steps:
       -name: setup sdk
         run: |
-          who ami
+          whoami
           /opt/toolchains/zephyr-sdk-0.16.5/setup.sh -c
       - name: Build
         run: |
