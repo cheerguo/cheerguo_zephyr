@@ -12,7 +12,8 @@ jobs:
       - name: setup sdk
         run: |
           whoami
-          /opt/toolchains/zephyr-sdk-0.16.5/setup.sh -c
+          ls /opt/toolchains
+
       - name: Build
         run: |
           pwd
