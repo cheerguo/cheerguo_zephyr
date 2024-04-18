@@ -106,6 +106,7 @@ if(("zephyr" STREQUAL ${ZEPHYR_TOOLCHAIN_VARIANT}) OR
       endif()
     endforeach()
 
+    
     if (NOT ${Zephyr-sdk_FOUND})
       # This means no compatible Zephyr SDK versions were found, set the version
       # back to the minimum version so that it is displayed in the error text.
